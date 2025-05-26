@@ -20,10 +20,8 @@ public class Main {
         FelineOverLord meow = cafe.getCatByWeight(3, 4);
         if (meow != null) System.out.println("Gewicht [3,4]: " + meow);
 
-        meow = cafe.getCatByName("Morticia");
-        if (meow != null) System.out.println("Name 'Morticia': " + meow);
+        cafe.getCatByName("Morticia").ifPresent(c -> System.out.println("Name 'Morticia': " + c));
 
-        meow = cafe.getCatByName("Miss Chief Sooky");
-        if (meow != null) System.out.println("Name 'Miss Chief Sooky': " + meow);
+        cafe.getCatByName("Miss Chief Sooky").ifPresent(c -> System.out.println("Name 'Miss Chief Sooky': " + c));
     }
 }
