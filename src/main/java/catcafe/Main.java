@@ -17,8 +17,7 @@ public class Main {
 
         System.out.println("Es schnurren " + cafe.getCatCount() + " Samtpfötchen.");
 
-        FelineOverLord meow = cafe.getCatByWeight(3, 4);
-        if (meow != null) System.out.println("Gewicht [3,4]: " + meow);
+        cafe.getCatByWeight(3, 4).ifPresent(c -> System.out.println("Gewicht [3,4]: " + c));;
 
         cafe.getCatByName("Morticia").ifPresent(c -> System.out.println("Name 'Morticia': " + c));
 
