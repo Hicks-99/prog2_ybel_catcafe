@@ -22,5 +22,8 @@ public class Main {
         cafe.getCatByName("Morticia").ifPresent(c -> System.out.println("Name 'Morticia': " + c));
 
         cafe.getCatByName("Miss Chief Sooky").ifPresent(c -> System.out.println("Name 'Miss Chief Sooky': " + c));
+
+        System.out.println("In-Order Traversal: \n" + cafe.accept(new InOrderVisitor<>()));
+        System.out.println("Post-Order Traversal: \n" + cafe.accept(new PostOrderVisitor<>()));
     }
 }
